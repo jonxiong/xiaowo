@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>小蜗科技界面-我要充值</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <script type="text/javascript" src="../js/flexible_css.debug.js"></script>
+    <script type="text/javascript" src="../js/flexible.debug.js"></script>
+    <meta name="apple-mobile-web-app-status-bar-style content=" black "">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../css/m_regist.css" />
+</head>
+
+<body>
+    <div class="layout">
+        <form id="pay_form" action="/pay/create" method="post">
+            <input id="payChannel" type="hidden" name="payChannel">
+            <input id="price" type="hidden" name="price">
+        </form>
+        <!-- 活动 -->
+        <div class="acc_activity">
+            <div class="activity_bg"></div>
+            <a href="" class="activity_join"></a>
+        </div>
+        <div class="acc_recharge">
+            <!-- 充值面额 -->
+            <div class="rec_money">
+                <span class="mon_itmeLeft">200元</span>
+                <span class="mon_itmeRight">100元</span>
+            </div>
+            <div class="rec_money">
+                <span class="mon_itmeLeft">50元</span>
+                <span class="mon_itmeRight">20元</span>
+            </div>
+            <!-- 其他 -->
+            <div class="rec_other">
+                其它
+                <input class="rec_input" type="text" id="money" placeholder="输入金额">
+            </div>
+            <!-- 同意 -->
+            <div class="login_agree">
+                <span id="agree" class="agree_check agree_ok"></span>
+                <span class="agree_cnt"><a class="agree_cnt" href="/html/agree.html">同意用户协议</a> </span>
+            </div>
+            <!-- 付款方式 -->
+            <div class="rec_pay">
+                <div class="rec_payItem">
+                    <div class="pay_way pay_wechat">微信支付</div>
+                    <span id="weixin" class="pay_check pay_ok"></span>
+                </div>
+                <div class="rec_payItem">
+                    <div class="pay_way pay_bank">银联支付</div>
+                    <span id="unionpay" class="pay_check"></span>
+                </div>
+            </div>
+            <!-- 充值按钮 -->
+            <div class="acc_btn">充值</div>
+        </div>
+    </div>
+</body>
+<!-- <script type="text/javascript" src="/js/zepto.min.js"></script> -->
+<!-- <script type="text/javascript">
+        $(function(){
+            $('#agree').click(function () {
+                $('#agree').toggleClass('agree_ok');
+            })
+
+            $('#weixin').click(function () {
+                if(!$('#weixin').hasClass('pay_ok')){
+                    $('#weixin').toggleClass('pay_ok');
+                    $('#unionpay').toggleClass('pay_ok');
+                }
+            })
+            $('#unionpay').click(function () {
+                if(!$('#unionpay').hasClass('pay_ok')) {
+                    $('#weixin').toggleClass('pay_ok');
+                    $('#unionpay').toggleClass('pay_ok');
+                }
+            })
+
+            $('.acc_btn').click(function () {
+
+                if(!$('#agree').hasClass('agree_ok')){
+                    alert("需要同意用户协议。");
+                    return false;
+                }
+                if (!/^\d{1,3}$/.test($('#price').val())){
+                    alert("请选择充值金额。");
+                    return false;
+                }
+                if($('#weixin').hasClass('pay_ok')){
+                    $('#payChannel').val(1);
+                }else {
+                    $('#payChannel').val(4);
+                }
+                $('#pay_form').submit();
+            })
+
+            $(".rec_money").on('click','span',function(ev){
+                var ev = $(ev.target);
+                $('#price').val(ev.html().replace("元", ""));
+                var evs = $(".rec_money span")
+                if(ev.hasClass('active')){
+                    return
+                }else{
+                    evs.removeClass('active');
+                    ev.addClass('active');
+                }
+                var money = $('#money').val("");
+            })
+
+            $('.rec_input').keyup(function () {
+                $('.mon_itmeLeft').removeClass('active');
+                $('.mon_itmeRight').removeClass('active');
+                var money = $('#money').val();
+                if(money.length>0&&(!/^\d{1,3}$/.test(money)||money>200)){
+                    alert("请输入200以下整数");
+                    $('#price').val("");
+                    return;
+                }
+                $('#price').val(money);
+            })
+        })
+    </script> -->
+
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>小蜗车萌活动页</title>
+    <script>
+        (function() {
+            var b = document.querySelector('meta[name="viewport"]') || document.createElement("meta");
+            b.setAttribute("name", "viewport");
+            if (window.is_zoom && "Y" == is_zoom) var c = 1,
+                a = 1;
+            else a = (c = window.devicePixelRatio) ? 1 / c : 1;
+            document.documentElement.setAttribute("data-dpr", c || 1);
+            b.setAttribute("content", "width=device-width,initial-scale=1, maximum-scale=" + a + ", minimum-scale=" + a + ", user-scalable=no,viewport-fit=cover");
+            document.head.appendChild(b);
+            document.addEventListener("DOMContentLoaded", function() {
+                b.setAttribute("content", "width=device-width,initial-scale=1, maximum-scale=" + a + ", minimum-scale=" + a + ", user-scalable=no,viewport-fit=cover")
+            })
+        })();
+    </script>
+    <script>
+        (function() {
+            document.documentElement.getAttribute("data-dpr");
+            var a = 100 / 750 * document.documentElement.offsetWidth;
+            document.querySelector("html").style.fontSize = a + "px";
+            window.addEventListener("resize", function() {
+                var a = 100 / 750 * document.querySelector("html").offsetWidth;
+                document.querySelector("html").style.fontSize = a + "px"
+            })
+        })();
+    </script>
+    <link rel="stylesheet" href="../css/avtivity.css">
+</head>
+
+<body>
+    <div class="activity">
+        <div class="topbanner">
+            <span class="rulebtn"></span>
+            <span class="toptit">招募时间：5月20日开始</span>
+            <img src="../image/top.png" alt="">
+        </div>
+        <div class="spandiv">
+            <div class="leftbtn">登陆</div>
+            <div class="rightbtn">注册</div>
+            <img src="../image/line2.png" alt="">
+        </div>
+        <div class="showpic">
+            <img src="../image/show-01.png" alt="">
+        </div>
+        <div class="showpicTwo">
+            <img src="../image/show-02.png" alt="">
+        </div>
+        <div class="join">
+            <div class="joinbtn">参与活动</div>
+            <img src="../image/show-03.png" alt="">
+        </div>
+        <div class="joinone">
+            <div class="mabtn">
+                <div class="btnitem">12311</div>
+                <div class="btnitem"></div>
+                <div class="btnitem"></div>
+                <div class="btnitem"></div>
+                <div class="btnitem"></div>
+                <div class="btnitem"></div>
+            </div>
+            <img src="../image/show-04.png" alt="">
+        </div>
+        <div class="jointwo">
+            <div class="progress">
+                <div class="proline"></div>
+            </div>
+            <div class="ganbtn"></div>
+            <div class="winning"></div>
+            <div class="con">
+                <p class="conyellow">对不起</p>
+                <p class="conwhite">您未获得体验资格</p>
+                <p class="conyellow">谢谢参与</p>
+            </div>
+            <img src="../image/show-05.png" alt="">
+        </div>
+        <!-- 规则蒙层 -->
+        <div class="rule" id="ruleCon" style="display: block">
+            <div class="rulepic">
+                <div class="delete"></div>
+                <div class="people">
+                    <div class="itemRule">
+                        <span class="name">活动规则说明：</span>
+                        <p class="part">用户在活动界面点击“参与活动”进入充值页面，单笔充值每20元充电费即可获得活动码1个。活动充值的充电费可使用于小蜗科技所有运营的汽车充电桩和电单车充电桩进行充电。</p>
+                        <p class="part">当1期所有2500个活动码分配完后，次日15：00系统自动抽选新能源汽车推广大使和幸运者，抽选结果由小蜗车盟公众号推送，您也可通过活动页面下方中奖名单中查看。</p>
+                        <span class="name">第一季1期</span>
+                        <p class="part">
+                            新能源汽车推广大使：吉利知豆D2新能源汽车使用权半年。（1名）
+                        </p>
+                        <p class="part">
+                            幸运者：VR眼镜千幻魔镜一台。（10名）
+                        </p>
+                        <p class="part">
+                            2、3、4....期 更多款式新能源汽车使用期限更长及各种礼品敬请期待。
+                        </p>
+                        <span class="name">活动码同时可用于: </span>
+                        <p class="part">
+                            1、参与新能源汽车推广大使和幸运者抽选。
+                        </p>
+                        <p class="part">
+                            2、凭活动码可到“小蜗快车盟”抵购新能源车款，最高可抵2000元。
+                        </p>
+                        <p class="part">
+                            3、兑换VR眼镜千幻魔镜16元优惠券（共1000份优惠券，先到先得，每样商品仅可使用一张优惠券）发送活动码给千幻优选商城客服即可兑换使用。
+                        </p>
+                        <span class="name"> 点击识别二维码进入商城</span>
+                        <img class="link" src="../image/link.png" alt="">
+                        <span class="name">小提示</span>
+                        <p class="part">
+                            可为推广大使免费安装壁挂式充电桩一台(用电接入条件由推广大使准备，充电费用自理含电费及服务费)。 新能源汽车推广大使需提供有效驾驶证，如无驾驶证也可将名额转赠他人。
+                        </p>
+                        <span class="name">备注:</span>
+                        <p class="part">
+                            1、新能源车及充电桩所有权归属小蜗科技，推广大使获得使用权。
+                        </p>
+                        <p class="part">
+                            2、用户从小蜗新能源汽车推广大使招募令活动界面点击“参与活动”进入充值页面，方视为活动充值，其他入口进入充值页面一律无效。
+                        </p>
+                        <p class="part">
+                            3、活动充值不支持退款。
+                        </p>
+                        <p class="part">
+                            4、活动结果以小蜗车盟微信公众号系统推送的信息为准。
+                        </p>
+                        <p class="part">
+                            5、活动抽选后，工作人员将于5个工作日内与中选者取得联系填写信息，核实信息后发放。（用户未填写信息，视为自动放弃，不予补发）
+                        </p>
+                        <p class="part">
+                            6、如出现无法参与活动情况，请联系小蜗客服，电话：0773-5811199/5813000。
+                        </p>
+                        <p class="part">
+                            7、活动期间，每位用户获得活动码个数上限为10个（用户ID、手机号码、身份证号，以上任何消息重复均视为同一用户）。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 规则蒙层 -->
+        <div class="rule" id="ruleName">
+            <div class="rulepic">
+                <div class="delete"></div>
+                <div class="people">
+                    <div class="item">
+                        <span class="name">某某</span>
+                        <span class="num">1233048383</span>
+                        <span class="price">啊大哭的 v 是大是大非</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/zepto.min.js"></script>
+    <script>
+        $('.')
+        console.log($)
+    </script>
+</body>
+
+</html>
